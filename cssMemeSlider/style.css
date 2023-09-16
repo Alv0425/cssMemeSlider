@@ -1,0 +1,34 @@
+/* Variables */
+:root{
+  --dark-blue: #2b2d42ff;
+  --light-gray: #8d99aeff;
+  --light: #edf2f4ff;
+  --red-pantone: #ef233cff;
+  --fire-engine-red: #d90429ff;
+  --number-of-memes:5;
+}
+
+/* Base */
+*{
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-blue);
+  background-image: url('./images/wiggle.svg');
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 0;
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  text-decoration-skip: objects;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
