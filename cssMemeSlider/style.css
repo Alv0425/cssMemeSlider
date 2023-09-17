@@ -109,6 +109,10 @@ body{
   background-color: rgba(239, 35, 60, 0.2);
 }
 
+.slider__pagination-button:active .slider__pagination-dot{
+  border: var(--red-pantone) 0.2rem solid;
+}
+
 @media (pointer:fine) and (hover:hover){
   .slider__pagination-button:hover .slider__pagination-dot{
     background-color: var(--red-pantone);
