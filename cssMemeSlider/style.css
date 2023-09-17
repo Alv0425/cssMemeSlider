@@ -33,7 +33,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-
 .main{
   margin: auto auto;
 }
@@ -69,6 +68,7 @@ body {
   width:calc(100%*var(--number-of-memes));
   overflow: hidden;
 }
+
 .slider__image-container{
   width:calc(100%/var(--number-of-memes));
 }
@@ -105,7 +105,6 @@ body {
   height:2rem;
   border-radius: 50%;
   transition: 0.5s;
-  pointer-events: all;
 }
 
 .slider__comment-1,
@@ -130,4 +129,32 @@ body {
 .slider__comment-1{
   transform: translateX(0%);
   opacity: 1;
+}
+
+/* Radio inputs selectors */
+/* For images */
+#meme1:checked ~ .slider__images {
+  transform:translateX(0%);
+}
+#meme2:checked ~ .slider__images {
+  transform:translateX(calc(-100%/var(--number-of-memes)));
+}
+#meme3:checked ~ .slider__images {
+  transform:translateX(calc(-100%*2/var(--number-of-memes)));
+}
+#meme4:checked ~ .slider__images {
+  transform:translateX(calc(-100%*3/var(--number-of-memes)));
+}
+#meme5:checked ~ .slider__images {
+  transform:translateX(calc(-100%*4/var(--number-of-memes)));
+}
+
+/* For comments */
+#meme1:checked ~ .slider__comment-1,
+#meme2:checked ~ .slider__comment-2,
+#meme3:checked ~ .slider__comment-3,
+#meme4:checked ~ .slider__comment-4,
+#meme5:checked ~ .slider__comment-5 {
+  opacity: 1;
+  transform: translateX(0%);
 }
