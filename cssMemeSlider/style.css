@@ -5,7 +5,7 @@
   --light: #edf2f4ff;
   --red-pantone: #ef233cff;
   --fire-engine-red: #d90429ff;
-  --number-of-memes:5;
+  --number-of-memes: 5;
 }
 
 /* Base */
@@ -13,12 +13,12 @@
   box-sizing: inherit;
 }
 
-html {
+html{
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body {
+body{
   background-color: var(--dark-blue);
   background-image: url('./images/wiggle.svg');
   display: flex;
@@ -27,7 +27,6 @@ body {
   margin: 0;
   height: 100vh;
   text-rendering: optimizelegibility;
-  text-decoration-skip: objects;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -39,12 +38,12 @@ body {
 
 .slider{
   background-color: var(--light);
-  padding:1rem;
+  padding: 1rem;
   border-radius: 1%;
-  box-shadow: 0rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.1rem 0.2rem 0.2rem rgba(0,0,0,0.2);
 }
 
-.slider__container {
+.slider__container{
   display: grid;
   width: 80vw;
   max-width: 50rem;
@@ -58,30 +57,30 @@ body {
   display: none;
 }
   
-.slider__images {
+.slider__images{
   grid-area: 1 / 1 / 2 / 3; 
   display: flex;
   flex-wrap: nowrap;
   transition: 1s;
   transition-timing-function: cubic-bezier(.51,-0.12,.43,.97);
   align-self: flex-start;
-  width:calc(100%*var(--number-of-memes));
+  width: calc(100%*var(--number-of-memes));
   overflow: hidden;
 }
 
 .slider__image-container{
-  width:calc(100%/var(--number-of-memes));
+  width: calc(100%/var(--number-of-memes));
 }
 
 .slider__image{
   display: block;
   object-fit: contain;
-  width:100%;
+  width: 100%;
 }
 
-.slider__pagination {
+.slider__pagination{
   grid-area: 2 / 2 / 3 / 3; 
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: end;
   background-color: var(--light);
@@ -101,8 +100,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:2rem;
-  height:2rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   transition: 0.5s;
 }
@@ -132,7 +131,7 @@ body {
     transform: translateX(-70%);
     line-height: 2rem;
     font-size: 1.5rem;
-    font-family:'Comic Neue','Coming Soon', Nunito, sans-serif;
+    font-family:'Comic Neue', Nunito, sans-serif;
     font-weight: 700;
     color: var(--dark-blue);
     opacity: 0;
@@ -140,7 +139,7 @@ body {
     transition-timing-function: cubic-bezier(.55,-0.07,.52,.96);
 }
 
-@media (width<768px){
+@media (width < 768px){
   .slider__images {
     grid-area: 1 / 1 / 2 / 2;
   }
@@ -159,20 +158,20 @@ body {
 
 /* Radio inputs selectors */
 /* For images */
-#meme1:checked ~ .slider__images {
-  transform:translateX(0%);
+#meme1:checked ~ .slider__images{
+  transform: translateX(0%);
 }
-#meme2:checked ~ .slider__images {
-  transform:translateX(calc(-100%/var(--number-of-memes)));
+#meme2:checked ~ .slider__images{
+  transform: translateX(calc(-100%/var(--number-of-memes)));
 }
-#meme3:checked ~ .slider__images {
-  transform:translateX(calc(-100%*2/var(--number-of-memes)));
+#meme3:checked ~ .slider__images{
+  transform: translateX(calc(-100%*2/var(--number-of-memes)));
 }
-#meme4:checked ~ .slider__images {
-  transform:translateX(calc(-100%*3/var(--number-of-memes)));
+#meme4:checked ~ .slider__images{
+  transform: translateX(calc(-100%*3/var(--number-of-memes)));
 }
-#meme5:checked ~ .slider__images {
-  transform:translateX(calc(-100%*4/var(--number-of-memes)));
+#meme5:checked ~ .slider__images{
+  transform: translateX(calc(-100%*4/var(--number-of-memes)));
 }
 
 /* For comments */
@@ -180,7 +179,7 @@ body {
 #meme2:checked ~ .slider__comment-2,
 #meme3:checked ~ .slider__comment-3,
 #meme4:checked ~ .slider__comment-4,
-#meme5:checked ~ .slider__comment-5 {
+#meme5:checked ~ .slider__comment-5{
   opacity: 1;
   transform: translateX(0%);
 }
@@ -190,7 +189,6 @@ body {
 #meme2:checked ~ .slider__pagination label[for="meme2"] .slider__pagination-dot,
 #meme3:checked ~ .slider__pagination label[for="meme3"] .slider__pagination-dot,
 #meme4:checked ~ .slider__pagination label[for="meme4"] .slider__pagination-dot,
-#meme5:checked ~ .slider__pagination label[for="meme5"] .slider__pagination-dot
-{
+#meme5:checked ~ .slider__pagination label[for="meme5"] .slider__pagination-dot{
   background-color: transparent;
 }
