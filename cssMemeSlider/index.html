@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pure CSS Meme Slider: RSS Stage-0 course task">
+  <meta name="keywords" content="HTML, CSS, slider">
+  <meta name="author" content="Alena Vilejshikava">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>CSS Meme Slider</title>
+</head>
+<body>
+  <main class="main">
+    <div class="slider">
+      <div class="slider__container">
+        <input type="radio" class="slider__input" id="meme1" name="meme" checked>
+        <input type="radio" class="slider__input" id="meme2" name="meme">
+        <input type="radio" class="slider__input" id="meme3" name="meme">
+        <input type="radio" class="slider__input" id="meme4" name="meme">
+        <input type="radio" class="slider__input" id="meme5" name="meme">
+        <div class="slider__images">
+          <div class="slider__image-container">
+            <img src="./images/meme1.jpg" alt="digging into rss course" class="slider__image">
+          </div>
+          <div class="slider__image-container">
+            <img src="./images/meme2.jpg" alt="reviewer 2 meme" class="slider__image">
+          </div>
+          <div class="slider__image-container">
+            <img src="./images/meme3.jpg" alt="stop sign" class="slider__image">
+          </div>
+          <div class="slider__image-container">
+            <img src="./images/meme4.jpg" alt="console.log meme" class="slider__image">
+          </div>
+          <div class="slider__image-container">
+            <img src="./images/meme5.gif" alt="a cat trying to fix water pipes" class="slider__image">
+          </div>
+        </div>
+        <div class="slider__pagination">
+          <label for="meme1" class="slider__pagination-button"><span class="slider__pagination-dot"></span></label>
+          <label for="meme2" class="slider__pagination-button"><span class="slider__pagination-dot"></span></label>
+          <label for="meme3" class="slider__pagination-button"><span class="slider__pagination-dot"></span></label>
+          <label for="meme4" class="slider__pagination-button"><span class="slider__pagination-dot"></span></label>
+          <label for="meme5" class="slider__pagination-button"><span class="slider__pagination-dot"></span></label>
+        </div>
+        <div class="slider__comment-1">Learning process at RSS</div>
+        <div class="slider__comment-2">Scary meme, inspired by stories about cross-check</div>
+        <div class="slider__comment-3">My code comments look like</div>
+        <div class="slider__comment-4">The final draft of my Library part#3</div>
+        <div class="slider__comment-5">Fixing errors in my code</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
